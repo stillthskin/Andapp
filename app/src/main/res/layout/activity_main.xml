@@ -4,102 +4,148 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:background="@drawable/backroud"
+    android:gravity="top"
     tools:context=".MainActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="120dp"
         android:gravity="center"
-        >
+        android:orientation="vertical"
+        android:background="#152238">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Home"
-            android:textColor="@color/black"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            />
+            android:text="@string/app_name"
+            android:textColor="#008080"
+            android:textSize="50sp"
+            android:textStyle="bold" />
 
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
 
-
-    </LinearLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="0dp"
-        android:gravity="end"
-        android:textSize="20dp"
-        android:text="Logout"
         android:clickable="true"
+        android:focusable="true"
+        android:gravity="end"
         android:onClick="logoutAct"
-        android:textColor="#F44336" />
+        android:text="@string/logout"
+        android:textColor="#00BCD4"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+        <TextView
+            android:id="@+id/staticWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome"
+            android:maxLines="1"
+            android:textColor="@color/white"/>
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:maxLines="1"
+            android:textColor="#009688"/>
+</LinearLayout>
+
+
+    </LinearLayout>
 
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:columnCount="2"
-        android:layout_marginTop="70dp"
+        android:background="@drawable/backroud"
+        android:layout_marginTop="120dp"
         android:rowCount="3">
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="fill"
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        android:layout_margin="10dp"
-        android:text="Button" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="fill"
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        android:layout_margin="10dp"
-        android:text="Button" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="fill"
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        android:layout_margin="10dp"
-        android:text="Button" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="fill"
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        android:layout_margin="10dp"
-        android:text="Button" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="fill"
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        android:layout_margin="10dp"
-        android:text="Button" />
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="fill"
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        android:layout_margin="10dp"
-        android:text="Button" />
+        <ImageView
+            android:id="@+id/drawerred"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:padding="30dp"
+            android:background="@drawable/borderad"
+            android:layout_margin="15dp"
+            android:src="@drawable/home"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="genredirect"
+            />
+        <ImageView
+            android:id="@+id/tabred"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:padding="30dp"
+            android:background="@drawable/borderad"
+            android:layout_margin="15dp"
+            android:src="@drawable/account"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="genredirect"
+            />
+        <ImageView
+            android:id="@+id/toolred"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:padding="30dp"
+            android:background="@drawable/borderad"
+            android:layout_margin="15dp"
+            android:src="@drawable/home"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="genredirect"
+            />
+        <ImageView
+            android:id="@+id/qrred"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:padding="30dp"
+            android:background="@drawable/borderad"
+            android:layout_margin="15dp"
+            android:src="@drawable/account"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="genredirect"
+            />
+        <ImageView
+            android:id="@+id/listviw"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:padding="30dp"
+            android:background="@drawable/borderad"
+            android:layout_margin="15dp"
+            android:src="@drawable/home"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="genredirect"
+            />
+        <ImageView
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:padding="30dp"
+            android:background="@drawable/borderad"
+            android:layout_margin="15dp"
+            android:src="@drawable/account"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="genredirect"
+            />
     </GridLayout>
 
 </RelativeLayout>

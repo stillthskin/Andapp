@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
+    SqlHelper sqlHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,17 +28,30 @@ public class LoginActivity extends AppCompatActivity {
         EditText passtxt = (EditText) findViewById(R.id.pass);
         String uname = unametxt.getText().toString();
         String pass = passtxt.getText().toString();
-
-        if (uname.equals("Dennis") && pass.equals("pass")){
-            Toast.makeText(this,"Login success!", Toast.LENGTH_LONG).show();
-            Intent i = new Intent(this, MainActivity.class);
-            startActivity(i);
-            finish();
-
+        if(uname.equals("") && pass.equals("")){
+            Toast.makeText(this, "Empty fields", Toast.LENGTH_SHORT).show();
         }
         else {
+            sqlHelper = new SqlHelper(this);
 
-            Toast.makeText(this, "Username or password incorrect",Toast.LENGTH_LONG).show();
+            if (sqlHelper.checkunamepassword(uname, pass)){
+                Toast.makeText(this,"Login success!", Toast.LENGTH_LONG).show();
+                Intent i = new Intent(this, MainActivity.class);
+                i.putExtra("uname",uname);
+                startActivity(i);
+                finish();
+
+            }
+            else {
+
+                Toast.makeText(this, "Username or password incorrect",Toast.LENGTH_LONG).show();
+            }
+
+
         }
+
+
+
+
     }
 }
