@@ -86,17 +86,29 @@
             android:onClick="register"
             android:background="@drawable/roundedcorner"
             android:layout_marginBottom="30dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Already a member?"/>
+            android:text="Already a member? "/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#01B0FF"
             android:clickable="true"
+            android:focusable="true"
+            android:textSize="13sp"
             android:onClick="loginRedirect"
             android:text="Login"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#01B0FF" />
+        </LinearLayout>
     </LinearLayout>
 
 

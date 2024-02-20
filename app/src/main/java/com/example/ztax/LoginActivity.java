@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
         EditText passtxt = (EditText) findViewById(R.id.pass);
         String uname = unametxt.getText().toString();
         String pass = passtxt.getText().toString();
-        if(uname.equals("") && pass.equals("")){
+        if(uname.equals("") || pass.equals("")){
             Toast.makeText(this, "Empty fields", Toast.LENGTH_SHORT).show();
         }
         else {

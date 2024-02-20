@@ -60,10 +60,15 @@
             android:onClick="login"
             android:background="@drawable/roundedcorner"
             android:layout_marginBottom="30dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Need to Create account?"/>
+                android:text="Need to Create account? "/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -71,5 +76,10 @@
                 android:clickable="true"
                 android:onClick="regRedirect"
                 android:text="Register"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#01B0FF" />
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>

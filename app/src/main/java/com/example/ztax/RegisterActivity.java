@@ -27,7 +27,7 @@ public class RegisterActivity extends AppCompatActivity {
         String pass = passtxt.getText().toString();
         String pass1 = passtxt1.getText().toString();
         if(pass.equals(pass1)) {
-            if (uname.equals("") && email.equals("") && pass.equals("")) {
+            if (uname.equals("") || email.equals("") || pass.equals("")) {
                 Toast.makeText(this, "Empty fields", Toast.LENGTH_SHORT).show();
 
             } else {
