@@ -8,8 +8,16 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+
 public class RegisterActivity extends AppCompatActivity {
     SqlHelper sqlHelper;
+
+    ArrayList<String> users = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +52,6 @@ public class RegisterActivity extends AppCompatActivity {
                     Intent i = new Intent(this, RegisterActivity.class);
                     startActivity(i);
                 }
-
             }
         }
         else {

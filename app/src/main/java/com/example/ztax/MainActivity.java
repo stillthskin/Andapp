@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         }
+        /*
         if(v.getId()== R.id.toolred){
             Toast.makeText(this,"Redirecting...", Toast.LENGTH_SHORT).show();
             Intent i = new Intent(this, Tooltab.class);
@@ -63,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(i);
 
 
-        }
+        }*/
 
     }
 }

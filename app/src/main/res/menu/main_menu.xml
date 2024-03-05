@@ -2,12 +2,20 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
         <item android:id="@+id/home"
-            android:title="Home"/>
+            android:title="Home"
+            android:icon="@drawable/home"/>
         <item android:id="@+id/about"
-            android:title="About"/>
+            android:title="About"
+            android:icon="@drawable/account"/>
         <item android:id="@+id/contact"
-            android:title="Contact"/>
+            android:title="Contact"
+            android:icon="@drawable/call"/>
+        <item android:id="@+id/settins"
+            android:title="Settings"
+            android:icon="@drawable/settings"/>
+        <item android:id="@+id/share"
+            android:title="Share"
+            android:icon="@drawable/share"/>
 
     </group>
-
 </menu>

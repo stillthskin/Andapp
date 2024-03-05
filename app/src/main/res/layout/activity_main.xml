@@ -62,7 +62,7 @@
 
     <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:columnCount="2"
         android:background="@color/white"
         android:layout_marginTop="120dp"
@@ -158,7 +158,7 @@
                     android:padding="30dp"
                     android:background="@color/white"
                     android:layout_margin="15dp"
-                    android:src="@drawable/home"
+                    android:src="@drawable/settingsblack"
                     android:clickable="true"
                     android:focusable="true"
                     android:onClick="genredirect"
@@ -193,7 +193,7 @@
                     android:padding="30dp"
                     android:background="@color/white"
                     android:layout_margin="15dp"
-                    android:src="@drawable/account"
+                    android:src="@drawable/share"
                     android:clickable="true"
                     android:focusable="true"
                     android:onClick="genredirect"
@@ -207,75 +207,7 @@
                     android:textStyle="bold"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/white"
-            android:layout_margin="10dp"
-            android:elevation="15dp"
-            app:cardCornerRadius="10dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:gravity="center">
-                <ImageView
-                    android:id="@+id/listviw"
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:padding="30dp"
-                    android:background="@color/white"
-                    android:layout_margin="15dp"
-                    android:src="@drawable/home"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:onClick="genredirect"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/app_name"
-                    android:textColor="@color/black"
-                    android:textSize="30sp"
-                    android:textStyle="bold"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/white"
-            android:layout_margin="10dp"
-            android:elevation="15dp"
-            app:cardCornerRadius="10dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:gravity="center">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:padding="30dp"
-                    android:background="@color/white"
-                    android:layout_margin="15dp"
-                    android:src="@drawable/account"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:onClick="genredirect"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/app_name"
-                    android:textColor="@color/black"
-                    android:textSize="30sp"
-                    android:textStyle="bold"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+
     </GridLayout>
 
 </RelativeLayout>
