@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
     android:background="@color/white">
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:id="@+id/profileImg"/>
     <TextView
         android:id="@+id/username"
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_toEndOf="@id/profileImg"
         android:textColor="@color/black"
         android:text="User Name"
         android:padding="6dp"
         android:textStyle="bold"
-        android:textSize="15sp"
-        />
+        android:textSize="15sp"/>
     <TextView
         android:id="@+id/useremail"
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_toEndOf="@id/profileImg"
         android:layout_below="@id/username"
@@ -28,7 +28,14 @@
         android:text="Example@gmail.com"
         android:padding="6dp"
         android:textStyle="bold"
-        android:textSize="15sp"
-        />
-
+        android:textSize="15sp"/>
+    <Button
+        android:id="@+id/userRmButton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Remove"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:layout_toEndOf="@id/username"
+        android:background="#4A041B"/>
 </RelativeLayout>

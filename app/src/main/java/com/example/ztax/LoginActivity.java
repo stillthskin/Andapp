@@ -35,11 +35,20 @@ public class LoginActivity extends AppCompatActivity {
             sqlHelper = new SqlHelper(this);
 
             if (sqlHelper.checkunamepassword(uname, pass)){
-                Toast.makeText(this,"Login success!", Toast.LENGTH_LONG).show();
-                Intent i = new Intent(this, MainActivity.class);
-                i.putExtra("uname",uname);
-                startActivity(i);
-                finish();
+                if(uname.equalsIgnoreCase("admin")){
+                    Toast.makeText(this,"Welcome Admin!", Toast.LENGTH_LONG).show();
+                    Intent i = new Intent(this, Listviw.class);
+                    i.putExtra("uname",uname);
+                    startActivity(i);
+                    finish();
+                }
+                else {
+                    Toast.makeText(this, "Login success!", Toast.LENGTH_LONG).show();
+                    Intent i = new Intent(this, MainActivity.class);
+                    i.putExtra("uname", uname);
+                    startActivity(i);
+                    finish();
+                }
 
             }
             else {

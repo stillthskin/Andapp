@@ -1,24 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="top"
+    android:background="@drawable/backroud"
     tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F8CACA"
+        android:layout_marginTop="80dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:gravity="center"
         android:orientation="vertical"
-        android:background="#152238">
+        android:background="@color/white">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/app_name"
-            android:textColor="#008080"
-            android:textSize="50sp"
+            android:textColor="@color/teal"
+            android:textSize="40sp"
             android:textStyle="bold" />
 
 <LinearLayout
@@ -35,28 +40,23 @@
             android:layout_height="wrap_content"
             android:text="Welcome"
             android:layout_weight="1"
-            android:textColor="@color/white"/>
+            android:textColor="@color/teal"/>
         <TextView
             android:id="@+id/welcome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:layout_weight="1"
-            android:textColor="#009688"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+            android:textColor="@color/teal"/>
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="45dp"
         android:clickable="true"
         android:focusable="true"
-        android:layout_weight="1"
         android:gravity="end"
         android:onClick="logoutAct"
-        android:text="@string/logout"
-        android:textColor="#00BCD4"
-        android:textSize="25sp"
-        android:textStyle="bold" />
+        android:background="@drawable/logout"/>
 </LinearLayout>
-
 
     </LinearLayout>
 
@@ -72,8 +72,8 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white"
             android:layout_margin="10dp"
-            android:elevation="15dp"
-            app:cardCornerRadius="10dp"
+            android:elevation="30dp"
+            app:cardCornerRadius="20dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1">
             <LinearLayout
@@ -84,21 +84,20 @@
         <ImageView
             android:id="@+id/drawerred"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="130dp"
             android:padding="30dp"
             android:background="@color/white"
             android:layout_margin="15dp"
             android:src="@drawable/home"
             android:clickable="true"
             android:focusable="true"
-            android:onClick="genredirect"
-            />
+            android:onClick="genredirect"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/app_name"
+                    android:text="@string/Home"
                     android:textColor="@color/black"
-                    android:textSize="30sp"
+                    android:textSize="25sp"
                     android:textStyle="bold"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -107,8 +106,8 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white"
             android:layout_margin="10dp"
-            android:elevation="15dp"
-            app:cardCornerRadius="10dp"
+            android:elevation="30dp"
+            app:cardCornerRadius="20dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1">
             <LinearLayout
@@ -119,21 +118,20 @@
                 <ImageView
                     android:id="@+id/tabred"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="125dp"
                     android:padding="30dp"
                     android:background="@color/white"
                     android:layout_margin="15dp"
-                    android:src="@drawable/account"
+                    android:src="@drawable/accountblk"
                     android:clickable="true"
                     android:focusable="true"
-                    android:onClick="genredirect"
-                    />
+                    android:onClick="genredirect"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/app_name"
+                    android:text="@string/More"
                     android:textColor="@color/black"
-                    android:textSize="30sp"
+                    android:textSize="25sp"
                     android:textStyle="bold"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -142,8 +140,8 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white"
             android:layout_margin="10dp"
-            android:elevation="15dp"
-            app:cardCornerRadius="10dp"
+            android:elevation="30dp"
+            app:cardCornerRadius="20dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1">
             <LinearLayout
@@ -152,23 +150,22 @@
                 android:orientation="vertical"
                 android:gravity="center">
                 <ImageView
-                    android:id="@+id/toolred"
+                    android:id="@+id/listViw"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="130dp"
                     android:padding="30dp"
                     android:background="@color/white"
                     android:layout_margin="15dp"
                     android:src="@drawable/settingsblack"
                     android:clickable="true"
                     android:focusable="true"
-                    android:onClick="genredirect"
-                    />
+                    android:onClick="genredirect"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/app_name"
+                    android:text="@string/Set"
                     android:textColor="@color/black"
-                    android:textSize="30sp"
+                    android:textSize="25sp"
                     android:textStyle="bold"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -177,8 +174,8 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white"
             android:layout_margin="10dp"
-            android:elevation="15dp"
-            app:cardCornerRadius="10dp"
+            android:elevation="30dp"
+            app:cardCornerRadius="20dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1">
             <LinearLayout
@@ -189,25 +186,25 @@
                 <ImageView
                     android:id="@+id/qrred"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="130dp"
                     android:padding="30dp"
                     android:background="@color/white"
                     android:layout_margin="15dp"
                     android:src="@drawable/share"
                     android:clickable="true"
                     android:focusable="true"
-                    android:onClick="genredirect"
-                    />
+                    android:onClick="genredirect"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/app_name"
+                    android:text="@string/Share"
                     android:textColor="@color/black"
-                    android:textSize="30sp"
+                    android:textSize="25sp"
                     android:textStyle="bold"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
     </GridLayout>
+    </RelativeLayout>
 
-</RelativeLayout>
+</ScrollView>

@@ -1,9 +1,13 @@
 <resources>
     <string name="app_name">ZTax</string>
     <string name="Login">Login</string>
+    <string name="Home">Home</string>
+    <string name="More">More</string>
+    <string name="Set">Settings</string>
+    <string name="Share">Share</string>
     <string name="logout">Q</string>
     <string name="Register">Register</string>
-    <string name="Extra">Lorem Ipsum dolor sit</string>
+    <string name="Extra">IRS: I Really Should</string>
     <string name="qr_code">qr_code</string>
     <string name="enter_your_info">Enter your info</string>
     <string name="open">Open Navigation Drawer</string>

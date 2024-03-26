@@ -8,6 +8,9 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class SqlHelper extends SQLiteOpenHelper {
     private static final String databaseName = "mydb.db";
 
@@ -26,6 +29,30 @@ public class SqlHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS users");
 
     }
+    public List<User> getUsers(){
+         String TABLE_USERS = "users";
+         String COLUMN_USERNAME = "Username";
+         String COLUMN_EMAIL = "Email";
+         String COLUMN_PASSWORD = "Password";
+        List<User> userList = new ArrayList<>();
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_USERS, null);
+
+        if (cursor.moveToFirst()) {
+            do {
+                String username = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_USERNAME));
+                String email = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_EMAIL));
+                String password = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_PASSWORD));
+
+                User user = new User(username, email, password);
+                userList.add(user);
+            } while (cursor.moveToNext());
+        }
+
+        cursor.close();
+        return userList;
+    }
     public Boolean insertUsers(String email, String username, String pass){
         SQLiteDatabase mydb = this.getWritableDatabase();
         ContentValues content = new ContentValues();
@@ -35,6 +62,13 @@ public class SqlHelper extends SQLiteOpenHelper {
         long res = mydb.insert("users",null,content);
 
         return res != -1;
+    }
+
+    public Boolean removeUser(String username){
+        SQLiteDatabase mydb = this.getWritableDatabase();
+        Cursor cusor = mydb.rawQuery("DELETE FROM users WHERE usename=?", new String[] {username});
+
+        return cusor.getCount() > 0;
     }
 
     public Boolean checkuname(String username){

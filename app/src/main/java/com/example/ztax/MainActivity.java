@@ -43,14 +43,15 @@ public class MainActivity extends AppCompatActivity {
 
 
         }
-        /*
-        if(v.getId()== R.id.toolred){
+
+        if(v.getId()== R.id.listViw){
             Toast.makeText(this,"Redirecting...", Toast.LENGTH_SHORT).show();
-            Intent i = new Intent(this, Tooltab.class);
+            Intent i = new Intent(this, Listviw.class);
             startActivity(i);
 
 
         }
+        /*
         if(v.getId()== R.id.qrred){
             Toast.makeText(this,"Redirecting...", Toast.LENGTH_SHORT).show();
             Intent i = new Intent(this, Qrread.class);
